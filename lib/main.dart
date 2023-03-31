@@ -1,5 +1,10 @@
-// import 'dart:js_util';
+// import 'dart:js_util';  /'
 
+import 'dart:developer';
+import 'package:calm_corner01/login.dart';
+
+import 'register.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -65,29 +70,29 @@ class _LoginPageState extends State<LoginPage> {
             // ),
           ],
         )),
-        // ElevatedButton(
-        //   child: Text('Get Started'),
-        //   onPressed: () {},
-        //   style: ElevatedButton.styleFrom(
-        //       backgroundColor: Colors.green,
-        //       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-        //       textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-        // ),
-        Container(
-          child: Container(
-            margin: EdgeInsets.all(32),
-            padding: EdgeInsets.all(20),
-            width: double.infinity,
-            decoration: BoxDecoration(
-                color: Color(0xFFB27AB8B),
-                borderRadius: BorderRadius.circular(50)),
-            child: Center(
-              child: Text(
-                "Get Startd",
-                style: TextStyle(color: Colors.white),
+        ElevatedButton(
+          child: Text('Get Started'),
+          style: ElevatedButton.styleFrom(
+            padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
+            elevation: 0,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+                Radius.circular(50),
               ),
             ),
+            minimumSize: Size(327, 50),
+            backgroundColor: Colors.green,
+            textStyle: const TextStyle(
+                color: Colors.white, fontSize: 20, fontStyle: FontStyle.normal),
           ),
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: ((context) => MyRegister())));
+          },
+        ),
+        const SizedBox(
+          width: 600.0,
+          height: 10.0,
         ),
       ],
     ));
