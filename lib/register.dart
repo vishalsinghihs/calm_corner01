@@ -177,12 +177,6 @@ class _MyRegisterState extends State<MyRegister> {
                           ),
                           ElevatedButton(
                             child: Text('Submit'),
-                            // textStyle: const TextStyle(
-                            //     color: Colors.black,
-                            //     fontSize: 20,
-                            //     fontStyle: FontStyle.normal),
-                            // style: TextStyle(
-                            //           color: Colors.white,
                             style: ElevatedButton.styleFrom(
                               padding: EdgeInsets.symmetric(
                                   horizontal: 80, vertical: 10),
